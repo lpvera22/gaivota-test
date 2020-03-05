@@ -5,8 +5,11 @@ const cors = require("cors");
 
 const { PORT, JWT_PW } = process.env;
 const mongo = require("../config/mongo");
+const mongoose=require("mongoose");
 const app = express();
+const farms=require("../routes/farms");
 
+mongoose.connect(mongo.getURL(), {useNewUrlParser: true, useUnifiedTopology: true});
 mongo.connectToServer();
 
 app.use(cors());
@@ -37,6 +40,7 @@ app.get("/auth", (req, res) => {
 app.get("/", (req, res) => {
 	res.status(200).send("Gaivota Test");
 });
+app.use('/api/farms',farms);
 
 app.listen(PORT !== "undefined" ? PORT : 5000, () => {
 	console.warn("App is running at http://localhost:" + PORT);
