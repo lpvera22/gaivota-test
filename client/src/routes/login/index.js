@@ -42,6 +42,7 @@ const Login = props => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        autoFocus
         name="email"
         type="input"
         onChange={handleChange("email")}

@@ -1,4 +1,8 @@
+/* eslint-disable indent */
+/*jshint esversion: 8 */
 var mongoose = require("mongoose");
+
+
 
 
 
@@ -13,8 +17,18 @@ const FarmSchema= new mongoose.Schema({
         type:String,
         required:true
     },
-    latitude:Number,
-    longitude:Number,
+
+    geometry: {
+        type: {
+          type: String,
+          enum: ['Point'],
+          required: true
+        }
+    },
+    coordinates: {
+        type: Array,
+        index: '2d'
+    },
     culture:String,
     variety:String,
     total_area:Number,
@@ -23,4 +37,6 @@ const FarmSchema= new mongoose.Schema({
 
 });
 const Farm= mongoose.model("Farm",FarmSchema);
+
+
 module.exports=Farm;

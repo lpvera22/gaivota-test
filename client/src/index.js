@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import Root from "./components/Root";
+
 import * as serviceWorker from "./serviceWorker";
 import "./styles/index.css";
 

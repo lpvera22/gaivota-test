@@ -37,5 +37,5 @@ router.delete('/:id',async (req,res)=>{
     if (!p) res.status(404).send('Precipitation not found')
     res.send(p);
 
-// });
+});
 module.exports=router;

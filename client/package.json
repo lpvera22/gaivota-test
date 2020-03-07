@@ -6,8 +6,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src/ --fix"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -22,10 +21,15 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "boostrap": "^2.0.0",
+    "fontawesome": "^5.6.3",
+    "leaflet": "^1.6.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-leaflet": "^2.6.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^3.4.0"
   },
   "devDependencies": {
     "customize-cra": "^0.8.0",
